@@ -39,7 +39,6 @@ YBCFLAGS += -DVERSION="\"${VERSION}${VERSIONEXTRA}\""
 YBCFLAGS += -DTEXTADDR=$(TEXTADDR) -DDEBUG=$(DEBUG)
 YBCFLAGS += -DMALLOCADDR=$(MALLOCADDR) -DMALLOCSIZE=$(MALLOCSIZE)
 YBCFLAGS += -DKERNELADDR=$(KERNELADDR)
-YBCFLAGS += -Werror -fdiagnostics-show-option
 YBCFLAGS += -I ./include
 YBCFLAGS += -fno-strict-aliasing
 
@@ -74,7 +73,6 @@ LLIBS = -lext2fs
 # For compiling userland utils
 #
 UCFLAGS = -Os $(CFLAGS) -Wall -I/usr/include
-UCFLAGS += -Werror -fdiagnostics-show-option
 
 # For compiling build-tools that run on the host.
 #
