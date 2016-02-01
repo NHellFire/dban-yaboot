@@ -64,6 +64,15 @@ void *malloc (unsigned int size)
     return caddr;
 }
 
+/* Calloc wrapper for malloc */
+void *memset(void *s, int c, size_t n);
+void *calloc(size_t nmemb, size_t size) {
+	void *caddr;
+	caddr = malloc(nmemb * size);
+	memset(caddr, 0, nmemb * size);
+	return caddr;
+}
+
 /* Do not fall back to the malloc above as posix_memalign is needed by
  * external libraries not yaboot */
 int posix_memalign(void **memptr, size_t alignment, size_t size)
