@@ -68,7 +68,7 @@ LFLAGS = -Ttext $(TEXTADDR) -Bstatic -melf32ppclinux
 
 # Libraries
 #
-LLIBS = -lext2fs
+LLIBS = ../e2fsprogs/lib/libext2fs.a
 
 # For compiling userland utils
 #
