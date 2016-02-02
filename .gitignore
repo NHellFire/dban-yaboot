@@ -1,0 +1,3 @@
+*.o
+second/yaboot
+util/addnote
